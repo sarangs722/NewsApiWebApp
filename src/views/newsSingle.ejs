@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techy News Shorts</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="/"> <img src="/img/logo.png" alt="logo_image" /></a>
+      </div>
+      <%- include('./partials/search.ejs')%>
+    </header>
+
+    <a href="/" class="button-18">&larr;- Back</a>
+    <div class="wrapper">
+      <div class="news-single">
+        <iframe
+          src="<%- articleUrl %>"
+          frameborder="0"
+          height="800"
+          width="100%"
+        ></iframe>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>©️ sarangs722</p>
+    </footer>
+  </body>
+</html>

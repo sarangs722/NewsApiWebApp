@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techy News Shorts</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="/"> <img src="/img/logo.png" alt="logo_image" /></a>
+      </div>
+
+      <%- include('./partials/search.ejs')%>
+    </header>
+
+    <div class="wrapper">
+      <div class="news">
+        <% if (articles != null) { %> <% articles.forEach(function(article,
+        index) { %>
+        <!-- <%- article.url %> -->
+        <a href="/article/<%- index %>" class="news__card">
+          <!-- <% if (article.urlToImage === null) { return;} %> -->
+          <img src="<%- article.urlToImage %>" alt="news_Image" />
+          <h2><%- article.title %></h2>
+          <p><%- article.description %></p>
+          <h4><%- article.source.name %></h4>
+        </a>
+        <% })%> <% } else { %> No posts found. <% } %>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>©️ sarangs722</p>
+    </footer>
+  </body>
+</html>
