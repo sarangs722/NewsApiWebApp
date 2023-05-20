@@ -7,6 +7,9 @@ app.listen(process.env.PORT || port, () => {
     console.log(`Server started on port ${port}.`);
 });
 
+// parsing data
+app.use(express.urlencoded({ extended: true }));
+
 // Static files
 app.use(express.static('/public'));
 
@@ -19,7 +22,6 @@ app.use('/js', express.static(__dirname + '/public/js'));
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({ extended: true }));
 
 // Routes
 const newsRouter = require('./src/routes/news');
