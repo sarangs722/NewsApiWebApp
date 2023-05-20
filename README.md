@@ -5,4 +5,4 @@
  
  ![](https://github.com/sarangs722/NewsApiWebApp/blob/main/newsapiwebappworking.gif)
  
- hosted live on https://drab-pear-crow-wrap.cyclic.app/
+ hosted live on https://news-shorts-by-sarang.cyclic.app/
